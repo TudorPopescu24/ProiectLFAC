@@ -1,0 +1,55 @@
+main() {
+
+    int a = 5;
+    int sum;
+    int div;
+    float prod;
+    char missingOpperand
+    char b;
+    string c;
+    float d;
+    bool e;
+    b = 'A';
+    c = "LFAC";
+    d = 1.5;
+    e = false;
+    sum = 3 + 7;
+    div = 11 / 5;
+    prod = a * d;
+    const int constanta = 100;
+    f = 7;
+    int a;
+    a = 4
+    a = 'D';
+    const int constanta2;
+
+    print("value of expression 3+7", sum);
+    print("value of expression 11/5", div);
+    print("value of expression a*d", prod);
+    print("value of a", a);
+    print("value of b", b);
+    print("value of c", c);
+    print("value of d", d);
+    print("value of e", e);
+    print("value of constant", constanta);
+
+    if(a == 5 && d == 1.5) { 
+        b = 'B';
+        c = "SALUT";
+        print("Am intrat in IF: ", b);
+        print("Am intrat in IF: ", c);
+    }
+
+    int i;
+    for(i = 1; i < 5; i = i + 1) {
+        print("Am intrat in FOR: ", i);
+        i = i + 1;
+    }
+    print("Am iesit din FOR: ", i);
+
+    while(a > 4 && d < 4) { 
+        a = a - 1;
+        print("Am intrat in WHILE: ", a);
+    }
+
+}
