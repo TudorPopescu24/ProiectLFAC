@@ -1,9 +1,30 @@
-main() {
+class A {
+    public:int x;
+    private:int y;
+    protected: int z;
+}
 
+int f(int t) {
+ if(t > 5)
+  t=t+2;
+}
+
+char f(int t) {
+ if(t > 5)
+  t=t+2;
+}
+
+int aGlobal;
+char bGlobal = 'x';
+float cGlobal[100];
+
+
+main() {
+    print("Value of aGlobal:", aGlobal);
+    print("Value of bGlobal:", bGlobal);
+    
+    A classA;
     int a = 5;
-    int sum;
-    int div;
-    float prod;
     char b;
     string c;
     float d;
@@ -12,14 +33,8 @@ main() {
     c = "LFAC";
     d = 1.5;
     e = false;
-    sum = 3 + 7;
-    div = 11 / 5;
-    prod = a * d;
     const int constanta = 100;
 
-    print("value of expression 3+7", sum);
-    print("value of expression 11/5", div);
-    print("value of expression a*d", prod);
     print("value of a", a);
     print("value of b", b);
     print("value of c", c);
@@ -27,23 +42,40 @@ main() {
     print("value of e", e);
     print("value of constant", constanta);
 
+    int sum = 3 + 7;
+    int div = 11 / 5;
+    float prod = a * d;
+
+    print("value of expression 3+7", sum);
+    print("value of expression 11/5", div);
+    print("value of expression a*d", prod);
+
+    int m = 10;
+    int n = 10;
+    int vector1[2];
+    int vector2[m][n];
+    int result = m + n + classA.x;
+
+    f(10);
+    f(sum);
+    f(a+7);
+
     if(a == 5 && d == 1.5) { 
         b = 'B';
         c = "SALUT";
-        print("Am intrat in IF: ", b);
-        print("Am intrat in IF: ", c);
     }
 
     int i;
     for(i = 1; i < 5; i = i + 1) {
-        print("Am intrat in FOR: ", i);
         i = i + 1;
     }
     print("Am iesit din FOR: ", i);
 
     while(a > 4 && d < 4) { 
         a = a - 1;
-        print("Am intrat in WHILE: ", a);
     }
+
+    print_table();
+    print_table_functions();
 
 }

@@ -23,7 +23,7 @@ int sintacticCorect = 1;
   class Data * data_value;
 }
 
-%token MAIN PRINT IF WHILE FOR CLASS EQUAL NOT_EQUAL AND OR CONST
+%token MAIN PRINT IF WHILE FOR CLASS PUBLIC PRIVATE PROTECTED PCT EQUAL NOT_EQUAL AND OR CONST ARRAY PRINT_TABLE PRINT_TABLE_FUNCTIONS
 %token <string_value> TYPE 
 %token <int_value> INT
 %token <float_value> FLOAT
@@ -39,19 +39,76 @@ int sintacticCorect = 1;
 %start progr
 %%
 
-progr: main {if (sintacticCorect == 1) {printf("Programul este corect sintactic\n");} else {printf("Program nu este corect sintactic.\n");}}
+
+progr: { memory.push_scope(); } declarations_global main { if (sintacticCorect == 1) {printf("Programul este corect sintactic\n");} else {printf("Program nu este corect sintactic.\n");}}
+     | main {if (sintacticCorect == 1) {printf("Programul este corect sintactic\n");} else {printf("Program nu este corect sintactic.\n");}}
      ;
 
-main : MAIN '(' ')'{ memory.push_scope(); } function_body { memory.pop_scope(); }
+declarations_global: declarations_global statement
+                   | declarations_global class
+                   | declarations_global function
+                   | statement
+                   | class
+                   | function
+                   ;
+
+main : MAIN '(' ')'{ memory.push_scope(); } function_body { memory.pop_scope(); memory.pop_scope();}
      ;
 
 function_body: '{' statement_seq '}'
              | '{' '}'
              ;
 
+function: TYPE  ID '(' ')' {if(memory.exists_function($1, $2)) {std::cout<<"Exista o functie cu acelasi nume \n";} memory.define_function($1, $2); memory.push_scope();} function_body {memory.pop_scope();}
+        | TYPE  ID '('{if(memory.exists_function($1, $2)) {std::cout<<"Exista o functie cu acelasi nume.\n";} memory.define_function($1, $2); memory.push_scope();} param_seq ')' function_body {memory.pop_scope();}
+        | TYPE CONST ID '(' ')' function_body 
+        | TYPE CONST ID '(' param_seq ')' function_body 
+        ;
+
+param_seq: TYPE ID { memory.declare($1,$2); }
+          | param_seq ',' TYPE ID { memory.declare($3,$4); }
+          | ID
+          | param_seq ','  ID
+          ;
+
+array: ID var
+     | TYPE ID var  ';' { memory.declare($1,$2); }
+     ;
+
+var: '[' size ']' '[' size']'
+   | '[' size ']'
+   ;
+
+size: INT
+    | ID
+    ;
+
+class: CLASS ID '{' {if(memory.exists_class($2)) {std::cout<<"Exista o clasa cu acelasi nume \n";} memory.define_class($2); memory.push_scope(); } class_contain '}'{ memory.pop_scope(); }
+     | CLASS ID '{' '}'  {if(memory.exists_class($2)) {std::cout<<"Exista o clasa cu acelasi nume\n ";} memory.define_class($2);}
+     ;
+
+class_contain: class_statement
+             | class_contain class_statement
+             ;
+
+class_statement: modification_access ':' TYPE ID ';' { memory.declare($3,$4); }
+               | modification_access TYPE ID ';' { memory.declare($2,$3); }
+               | modification_access ':' function 
+               | modification_access  function 
+               ;  
+
+modification_access: PUBLIC
+                   | PRIVATE
+                   | PROTECTED
+                   ;
+
 statement_seq: statement
              | statement_seq statement
              ;
+
+parameter_list: expression
+              | parameter_list ',' expression
+              ;
 
 statement: ID '=' expression ';'{if(memory.exists($1)){memory.assign($1,$3);} else {std::cout<< "Variabila " << $1 << " nu a fost declarata.\n"; sintacticCorect = 0;}}
          | TYPE ID ';'  { memory.declare($1,$2); }
@@ -68,7 +125,14 @@ statement: ID '=' expression ';'{if(memory.exists($1)){memory.assign($1,$3);} el
          | if_instruction
          | while_instruction
          | for_instruction
+         | array
+         | ID ID ';' {if(!memory.exists_class($1)) {std::cout<<"Clasa nu este definita. \n";} memory.declare($1,$2); }
+         | ID '(' ')' ';' {if(!memory.exists_function_byName($1)) {std::cout<<"Functia nu este definita. \n";} }
+         | ID '(' parameter_list ')' ';' {if(!memory.exists_function_byName($1)) {std::cout<<"Functia nu este definita.\n";} }
+         | function
          | '{' statement_seq '}'
+         | PRINT_TABLE '(' ')' ';' { memory.table_print();}
+         | PRINT_TABLE_FUNCTIONS '(' ')' ';' {memory.table_print_functions();}
          ;
 
 expression: expression '+' expression { Data &a=*($1); Data &b=*($3); $$=a+b; }
@@ -82,6 +146,10 @@ expression: expression '+' expression { Data &a=*($1); Data &b=*($3); $$=a+b; }
           | CHAR { $$=new Data($1);}
           | BOOL { $$=new Data($1);}
           | ID { $$=memory.get($1);}
+          | ID '(' ')'  {if(!memory.exists_function_byName($1)) {std::cout<<"Functia nu este definita.\n";} $$=new Data(0); }
+          | ID '(' param_seq ')'{if(!memory.exists_function_byName($1)) {std::cout<<"Functia nu este definita.\n";} $$=new Data(0); }
+          | ID PCT ID { if(!memory.exists($1)) {std::cout<<"Nu exista o clasa cu acest nume. \n";}   $$=new Data(0);}
+          | array {$$=new Data(0);}
           ;
 
 if_instruction: IF '(' bool_expression ')' {memory.push_scope();} statement {memory.pop_scope();}

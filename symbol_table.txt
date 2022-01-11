@@ -1,0 +1,21 @@
+int a 4
+char b B
+string c "SALUT"
+class classA string
+int constanta 100
+float d 1.50
+int div 2
+bool e 0
+int i 2
+int m 10
+int n 10
+float prod 7.50
+int result 20
+int sum 10
+int vector1 0
+int vector2 0
+
+int aGlobal 0
+char bGlobal x
+float cGlobal 0.00
+

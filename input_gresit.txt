@@ -40,6 +40,10 @@ main() {
         print("Am intrat in IF: ", c);
     }
 
+    int vector1[2];
+    int vector2[m][n];
+    vector1 = c;
+
     int i;
     for(i = 1; i < 5; i = i + 1) {
         print("Am intrat in FOR: ", i);

@@ -55,18 +55,25 @@ extern int yydebug;
     WHILE = 261,
     FOR = 262,
     CLASS = 263,
-    EQUAL = 264,
-    NOT_EQUAL = 265,
-    AND = 266,
-    OR = 267,
-    CONST = 268,
-    TYPE = 269,
-    INT = 270,
-    FLOAT = 271,
-    STRING = 272,
-    CHAR = 273,
-    BOOL = 274,
-    ID = 275
+    PUBLIC = 264,
+    PRIVATE = 265,
+    PROTECTED = 266,
+    PCT = 267,
+    EQUAL = 268,
+    NOT_EQUAL = 269,
+    AND = 270,
+    OR = 271,
+    CONST = 272,
+    ARRAY = 273,
+    PRINT_TABLE = 274,
+    PRINT_TABLE_FUNCTIONS = 275,
+    TYPE = 276,
+    INT = 277,
+    FLOAT = 278,
+    STRING = 279,
+    CHAR = 280,
+    BOOL = 281,
+    ID = 282
   };
 #endif
 /* Tokens.  */
@@ -76,18 +83,25 @@ extern int yydebug;
 #define WHILE 261
 #define FOR 262
 #define CLASS 263
-#define EQUAL 264
-#define NOT_EQUAL 265
-#define AND 266
-#define OR 267
-#define CONST 268
-#define TYPE 269
-#define INT 270
-#define FLOAT 271
-#define STRING 272
-#define CHAR 273
-#define BOOL 274
-#define ID 275
+#define PUBLIC 264
+#define PRIVATE 265
+#define PROTECTED 266
+#define PCT 267
+#define EQUAL 268
+#define NOT_EQUAL 269
+#define AND 270
+#define OR 271
+#define CONST 272
+#define ARRAY 273
+#define PRINT_TABLE 274
+#define PRINT_TABLE_FUNCTIONS 275
+#define TYPE 276
+#define INT 277
+#define FLOAT 278
+#define STRING 279
+#define CHAR 280
+#define BOOL 281
+#define ID 282
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -102,7 +116,7 @@ union YYSTYPE
   bool bool_value;
   class Data * data_value;
 
-#line 106 "y.tab.h"
+#line 120 "y.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
