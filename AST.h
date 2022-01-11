@@ -215,21 +215,12 @@ int prioritate(char c)
         return 2;
     case '^':
         return 3;
-    case 's':
-    case 'c':
-    case 't':
-    case 'g':
-    case 'l':
-    case 'r':
-    case 'e':
-    case 'z':
-        return 4;
     case '(':
-        return 5;
+        return 4;
     case ')':
-        return 6;
+        return 5;
     default:
-        return 7;
+        return 6;
     }
 }
 
@@ -252,55 +243,7 @@ int prioritate1(char c[])
 
 void adaugaincoada(coada &postfix, stiva &S)
 {
-    //verificam daca este functie
-    if (S.varf->info == 's')
-    {
-        enqueue(postfix, 's');
-        enqueue(postfix, 'i');
-        enqueue(postfix, 'n');
-    }
-    else if (S.varf->info == 'c')
-    {
-        enqueue(postfix, 'c');
-        enqueue(postfix, 'o');
-        enqueue(postfix, 's');
-    }
-    else if (S.varf->info == 't')
-    {
-        enqueue(postfix, 't');
-        enqueue(postfix, 'g');
-    }
-    else if (S.varf->info == 'g')
-    {
-        enqueue(postfix, 'c');
-        enqueue(postfix, 't');
-        enqueue(postfix, 'g');
-    }
-    else if (S.varf->info == 'l')
-    {
-        enqueue(postfix, 'l');
-        enqueue(postfix, 'o');
-        enqueue(postfix, 'g');
-    }
-    else if (S.varf->info == 'r')
-    {
-        enqueue(postfix, 'r');
-        enqueue(postfix, 'a');
-        enqueue(postfix, 'd');
-    }
-    else if (S.varf->info == 'e')
-    {
-        enqueue(postfix, 'l');
-        enqueue(postfix, 'n');
-    }
-    else if (S.varf->info == 'z')
-    {
-        enqueue(postfix, 'l');
-        enqueue(postfix, 'g');
-    }
-    else
-        enqueue(postfix, S.varf->info);
-
+    enqueue(postfix, S.varf->info);
     pop(S);
 }
 

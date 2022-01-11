@@ -57,6 +57,7 @@ main : MAIN '(' ')'{ memory.push_scope(); } function_body { memory.pop_scope(); 
 
 function_body: '{' statement_seq '}'
              | '{' '}'
+             | '{' statement_seq {std::cout<<"Lipseste acolada de la finalul declararii functiei. \n";}
              ;
 
 function: TYPE  ID '(' ')' {if(memory.exists_function($1, $2)) {std::cout<<"Exista o functie cu acelasi nume \n";} memory.define_function($1, $2); memory.push_scope();} function_body {memory.pop_scope();}

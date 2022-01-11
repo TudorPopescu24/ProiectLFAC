@@ -1,10 +1,16 @@
+int wrongF(int t) {
+ if(t > 5)
+  t=t+2;
+
 main() {
 
     int a = 5;
     int sum;
     int div;
     float prod;
+    
     char missingOpperand
+    
     char b;
     string c;
     float d;
@@ -17,10 +23,15 @@ main() {
     div = 11 / 5;
     prod = a * d;
     const int constanta = 100;
+    
     f = 7;
+    
     int a;
+    
     a = 4
+    
     a = 'D';
+    
     const int constanta2;
 
     print("value of expression 3+7", sum);
@@ -42,6 +53,7 @@ main() {
 
     int vector1[2];
     int vector2[m][n];
+    
     vector1 = c;
 
     int i;

@@ -525,7 +525,7 @@ union yyalloc
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  34
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  107
+#define YYNRULES  108
 /* YYNSTATES -- Number of states.  */
 #define YYNSTATES  229
 
@@ -578,16 +578,16 @@ static const yytype_int8 yytranslate[] =
 static const yytype_uint8 yyrline[] =
 {
        0,    43,    43,    43,    44,    47,    48,    49,    50,    51,
-      52,    55,    55,    58,    59,    62,    62,    63,    63,    64,
-      65,    68,    69,    70,    71,    74,    75,    78,    79,    82,
-      83,    86,    86,    87,    90,    91,    94,    95,    96,    97,
-     100,   101,   102,   105,   106,   109,   110,   113,   114,   115,
+      52,    55,    55,    58,    59,    60,    63,    63,    64,    64,
+      65,    66,    69,    70,    71,    72,    75,    76,    79,    80,
+      83,    84,    87,    87,    88,    91,    92,    95,    96,    97,
+      98,   101,   102,   103,   106,   107,   110,   111,   114,   115,
      116,   117,   118,   119,   120,   121,   122,   123,   124,   125,
      126,   127,   128,   129,   130,   131,   132,   133,   134,   135,
-     136,   139,   140,   141,   142,   143,   144,   145,   146,   147,
-     148,   149,   150,   151,   152,   153,   156,   156,   157,   157,
-     160,   160,   161,   161,   164,   164,   165,   165,   168,   169,
-     170,   171,   172,   175,   176,   177,   178,   179
+     136,   137,   140,   141,   142,   143,   144,   145,   146,   147,
+     148,   149,   150,   151,   152,   153,   154,   157,   157,   158,
+     158,   161,   161,   162,   162,   165,   165,   166,   166,   169,
+     170,   171,   172,   173,   176,   177,   178,   179,   180
 };
 #endif
 
@@ -671,27 +671,27 @@ static const yytype_int8 yydefact[] =
 {
        2,     0,     0,     0,     4,     0,     1,     0,     0,     0,
        0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-      10,    62,     9,     8,    59,    60,    61,    11,     0,     0,
-       0,     0,     0,     0,     0,     0,     0,     0,    54,     0,
-       0,     0,     0,    25,    66,     0,    43,     3,     7,     6,
-       5,     0,     0,    76,    77,    78,    79,    80,    81,     0,
-      85,     0,     0,     0,     0,     0,     0,     0,     0,    31,
-      57,     0,     0,     0,     0,    17,    48,     0,     0,    63,
-       0,     0,    45,    29,    30,     0,    53,    67,    44,     0,
+      10,    63,     9,     8,    60,    61,    62,    11,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,    55,     0,
+       0,     0,     0,    26,    67,     0,    44,     3,     7,     6,
+       5,     0,     0,    77,    78,    79,    80,    81,    82,     0,
+      86,     0,     0,     0,     0,     0,     0,     0,     0,    32,
+      58,     0,     0,     0,     0,    18,    49,     0,     0,    64,
+       0,     0,    46,    30,    31,     0,    54,    68,    45,     0,
       12,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,     0,     0,     0,    86,
-       0,     0,    88,    92,    90,     0,    33,     0,    51,     0,
-      68,    69,     0,     0,    15,     0,    55,    26,    64,     0,
-       0,    28,    47,    14,     0,    84,     0,    23,    82,     0,
-      75,     0,    71,    72,    73,    74,   102,   107,    98,    99,
-     100,   101,     0,   103,   104,     0,   105,   106,     0,     0,
-       0,     0,    40,    41,    42,     0,    34,     0,    56,    70,
-       0,     0,     0,     0,    49,    65,    46,     0,    13,    21,
-      83,     0,    58,     0,    87,    89,    93,    91,     0,    32,
-      35,     0,     0,    39,    50,    19,     0,    16,     0,     0,
-       0,    24,    52,     0,     0,     0,     0,    38,    20,    18,
-      27,    22,     0,     0,    37,     0,     0,     0,    36,     0,
-       0,     0,     0,    96,    94,     0,     0,    97,    95
+       0,     0,     0,     0,     0,     0,     0,     0,     0,    87,
+       0,     0,    89,    93,    91,     0,    34,     0,    52,     0,
+      69,    70,     0,     0,    16,     0,    56,    27,    65,     0,
+       0,    29,    48,    14,    15,    85,     0,    24,    83,     0,
+      76,     0,    72,    73,    74,    75,   103,   108,    99,   100,
+     101,   102,     0,   104,   105,     0,   106,   107,     0,     0,
+       0,     0,    41,    42,    43,     0,    35,     0,    57,    71,
+       0,     0,     0,     0,    50,    66,    47,     0,    13,    22,
+      84,     0,    59,     0,    88,    90,    94,    92,     0,    33,
+      36,     0,     0,    40,    51,    20,     0,    17,     0,     0,
+       0,    25,    53,     0,     0,     0,     0,    39,    21,    19,
+      28,    23,     0,     0,    38,     0,     0,     0,    37,     0,
+       0,     0,     0,    97,    95,     0,     0,    98,    96
 };
 
   /* YYPGOTO[NTERM-NUM].  */
@@ -830,32 +830,32 @@ static const yytype_int8 yystos[] =
 static const yytype_int8 yyr1[] =
 {
        0,    45,    47,    46,    46,    48,    48,    48,    48,    48,
-      48,    50,    49,    51,    51,    53,    52,    54,    52,    52,
-      52,    55,    55,    55,    55,    56,    56,    57,    57,    58,
-      58,    60,    59,    59,    61,    61,    62,    62,    62,    62,
-      63,    63,    63,    64,    64,    65,    65,    66,    66,    66,
+      48,    50,    49,    51,    51,    51,    53,    52,    54,    52,
+      52,    52,    55,    55,    55,    55,    56,    56,    57,    57,
+      58,    58,    60,    59,    59,    61,    61,    62,    62,    62,
+      62,    63,    63,    63,    64,    64,    65,    65,    66,    66,
       66,    66,    66,    66,    66,    66,    66,    66,    66,    66,
       66,    66,    66,    66,    66,    66,    66,    66,    66,    66,
-      66,    67,    67,    67,    67,    67,    67,    67,    67,    67,
-      67,    67,    67,    67,    67,    67,    69,    68,    70,    68,
-      72,    71,    73,    71,    75,    74,    76,    74,    77,    77,
-      77,    77,    77,    78,    78,    78,    78,    78
+      66,    66,    67,    67,    67,    67,    67,    67,    67,    67,
+      67,    67,    67,    67,    67,    67,    67,    69,    68,    70,
+      68,    72,    71,    73,    71,    75,    74,    76,    74,    77,
+      77,    77,    77,    77,    78,    78,    78,    78,    78
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_int8 yyr2[] =
 {
        0,     2,     0,     3,     1,     2,     2,     2,     1,     1,
-       1,     0,     5,     3,     2,     0,     6,     0,     7,     6,
-       7,     2,     4,     1,     3,     2,     4,     6,     3,     1,
-       1,     0,     6,     4,     1,     2,     5,     4,     3,     2,
-       1,     1,     1,     1,     2,     1,     3,     4,     3,     5,
-       6,     4,     7,     3,     2,     4,     5,     3,     6,     1,
-       1,     1,     1,     3,     4,     5,     1,     3,     4,     4,
-       5,     3,     3,     3,     3,     3,     1,     1,     1,     1,
-       1,     1,     3,     4,     3,     1,     0,     6,     0,     6,
-       0,     6,     0,     6,     0,    14,     0,    14,     3,     3,
-       3,     3,     3,     3,     3,     3,     3,     3
+       1,     0,     5,     3,     2,     2,     0,     6,     0,     7,
+       6,     7,     2,     4,     1,     3,     2,     4,     6,     3,
+       1,     1,     0,     6,     4,     1,     2,     5,     4,     3,
+       2,     1,     1,     1,     1,     2,     1,     3,     4,     3,
+       5,     6,     4,     7,     3,     2,     4,     5,     3,     6,
+       1,     1,     1,     1,     3,     4,     5,     1,     3,     4,
+       4,     5,     3,     3,     3,     3,     3,     1,     1,     1,
+       1,     1,     1,     3,     4,     3,     1,     0,     6,     0,
+       6,     0,     6,     0,     6,     0,    14,     0,    14,     3,
+       3,     3,     3,     3,     3,     3,     3,     3,     3
 };
 
 
@@ -1581,409 +1581,415 @@ yyreduce:
     break;
 
   case 15:
-#line 62 "lfac.y"
-                           {if(memory.exists_function((yyvsp[-3].string_value), (yyvsp[-2].string_value))) {std::cout<<"Exista o functie cu acelasi nume \n";} memory.define_function((yyvsp[-3].string_value), (yyvsp[-2].string_value)); memory.push_scope();}
+#line 60 "lfac.y"
+                                 {std::cout<<"Lipseste acolada de la finalul declararii functiei. \n";}
 #line 1587 "y.tab.c"
     break;
 
   case 16:
-#line 62 "lfac.y"
-                                                                                                                                                                                       {memory.pop_scope();}
+#line 63 "lfac.y"
+                           {if(memory.exists_function((yyvsp[-3].string_value), (yyvsp[-2].string_value))) {std::cout<<"Exista o functie cu acelasi nume \n";} memory.define_function((yyvsp[-3].string_value), (yyvsp[-2].string_value)); memory.push_scope();}
 #line 1593 "y.tab.c"
     break;
 
   case 17:
 #line 63 "lfac.y"
-                      {if(memory.exists_function((yyvsp[-2].string_value), (yyvsp[-1].string_value))) {std::cout<<"Exista o functie cu acelasi nume.\n";} memory.define_function((yyvsp[-2].string_value), (yyvsp[-1].string_value)); memory.push_scope();}
+                                                                                                                                                                                       {memory.pop_scope();}
 #line 1599 "y.tab.c"
     break;
 
   case 18:
-#line 63 "lfac.y"
-                                                                                                                                                                                                {memory.pop_scope();}
+#line 64 "lfac.y"
+                      {if(memory.exists_function((yyvsp[-2].string_value), (yyvsp[-1].string_value))) {std::cout<<"Exista o functie cu acelasi nume.\n";} memory.define_function((yyvsp[-2].string_value), (yyvsp[-1].string_value)); memory.push_scope();}
 #line 1605 "y.tab.c"
     break;
 
-  case 21:
-#line 68 "lfac.y"
-                   { memory.declare((yyvsp[-1].string_value),(yyvsp[0].string_value)); }
+  case 19:
+#line 64 "lfac.y"
+                                                                                                                                                                                                {memory.pop_scope();}
 #line 1611 "y.tab.c"
     break;
 
   case 22:
 #line 69 "lfac.y"
-                                  { memory.declare((yyvsp[-1].string_value),(yyvsp[0].string_value)); }
+                   { memory.declare((yyvsp[-1].string_value),(yyvsp[0].string_value)); }
 #line 1617 "y.tab.c"
     break;
 
-  case 26:
-#line 75 "lfac.y"
-                        { memory.declare((yyvsp[-3].string_value),(yyvsp[-2].string_value)); }
+  case 23:
+#line 70 "lfac.y"
+                                  { memory.declare((yyvsp[-1].string_value),(yyvsp[0].string_value)); }
 #line 1623 "y.tab.c"
     break;
 
-  case 31:
-#line 86 "lfac.y"
-                    {if(memory.exists_class((yyvsp[-1].string_value))) {std::cout<<"Exista o clasa cu acelasi nume \n";} memory.define_class((yyvsp[-1].string_value)); memory.push_scope(); }
+  case 27:
+#line 76 "lfac.y"
+                        { memory.declare((yyvsp[-3].string_value),(yyvsp[-2].string_value)); }
 #line 1629 "y.tab.c"
     break;
 
   case 32:
-#line 86 "lfac.y"
-                                                                                                                                                                    { memory.pop_scope(); }
+#line 87 "lfac.y"
+                    {if(memory.exists_class((yyvsp[-1].string_value))) {std::cout<<"Exista o clasa cu acelasi nume \n";} memory.define_class((yyvsp[-1].string_value)); memory.push_scope(); }
 #line 1635 "y.tab.c"
     break;
 
   case 33:
 #line 87 "lfac.y"
-                         {if(memory.exists_class((yyvsp[-2].string_value))) {std::cout<<"Exista o clasa cu acelasi nume\n ";} memory.define_class((yyvsp[-2].string_value));}
+                                                                                                                                                                    { memory.pop_scope(); }
 #line 1641 "y.tab.c"
     break;
 
-  case 36:
-#line 94 "lfac.y"
-                                                     { memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
+  case 34:
+#line 88 "lfac.y"
+                         {if(memory.exists_class((yyvsp[-2].string_value))) {std::cout<<"Exista o clasa cu acelasi nume\n ";} memory.define_class((yyvsp[-2].string_value));}
 #line 1647 "y.tab.c"
     break;
 
   case 37:
 #line 95 "lfac.y"
-                                                 { memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
+                                                     { memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
 #line 1653 "y.tab.c"
     break;
 
-  case 47:
-#line 113 "lfac.y"
-                                {if(memory.exists((yyvsp[-3].string_value))){memory.assign((yyvsp[-3].string_value),(yyvsp[-1].data_value));} else {std::cout<< "Variabila " << (yyvsp[-3].string_value) << " nu a fost declarata.\n"; sintacticCorect = 0;}}
+  case 38:
+#line 96 "lfac.y"
+                                                 { memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
 #line 1659 "y.tab.c"
     break;
 
   case 48:
 #line 114 "lfac.y"
-                        { memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
+                                {if(memory.exists((yyvsp[-3].string_value))){memory.assign((yyvsp[-3].string_value),(yyvsp[-1].data_value));} else {std::cout<< "Variabila " << (yyvsp[-3].string_value) << " nu a fost declarata.\n"; sintacticCorect = 0;}}
 #line 1665 "y.tab.c"
     break;
 
   case 49:
 #line 115 "lfac.y"
-                                      {memory.declare((yyvsp[-4].string_value),(yyvsp[-3].string_value)); memory.assign((yyvsp[-3].string_value),(yyvsp[-1].data_value));}
+                        { memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
 #line 1671 "y.tab.c"
     break;
 
   case 50:
 #line 116 "lfac.y"
-                                            {memory.declare((yyvsp[-4].string_value),(yyvsp[-3].string_value)); memory.assign((yyvsp[-3].string_value),(yyvsp[-1].data_value));}
+                                      {memory.declare((yyvsp[-4].string_value),(yyvsp[-3].string_value)); memory.assign((yyvsp[-3].string_value),(yyvsp[-1].data_value));}
 #line 1677 "y.tab.c"
     break;
 
   case 51:
 #line 117 "lfac.y"
-                             {std::cout<< "Variabila constanta " << (yyvsp[-1].string_value) << " nu poate fi declarata fara sa i se asigneze o valoare.\n"; sintacticCorect = 0;}
+                                            {memory.declare((yyvsp[-4].string_value),(yyvsp[-3].string_value)); memory.assign((yyvsp[-3].string_value),(yyvsp[-1].data_value));}
 #line 1683 "y.tab.c"
     break;
 
   case 52:
 #line 118 "lfac.y"
-                                               {memory.print((yyvsp[-4].data_value),(yyvsp[-2].string_value)); }
+                             {std::cout<< "Variabila constanta " << (yyvsp[-1].string_value) << " nu poate fi declarata fara sa i se asigneze o valoare.\n"; sintacticCorect = 0;}
 #line 1689 "y.tab.c"
     break;
 
   case 53:
 #line 119 "lfac.y"
-                             {std::cout<< "Lipseste ';' la finalul instructiunii\n"; sintacticCorect = 0;}
+                                               {memory.print((yyvsp[-4].data_value),(yyvsp[-2].string_value)); }
 #line 1695 "y.tab.c"
     break;
 
   case 54:
 #line 120 "lfac.y"
-                   {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
+                             {std::cout<< "Lipseste ';' la finalul instructiunii\n"; sintacticCorect = 0;}
 #line 1701 "y.tab.c"
     break;
 
   case 55:
 #line 121 "lfac.y"
-                                  {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
+                   {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
 #line 1707 "y.tab.c"
     break;
 
   case 56:
 #line 122 "lfac.y"
-                                        {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
+                                  {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
 #line 1713 "y.tab.c"
     break;
 
   case 57:
 #line 123 "lfac.y"
-                         {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
+                                        {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
 #line 1719 "y.tab.c"
     break;
 
   case 58:
 #line 124 "lfac.y"
-                                           {memory.print((yyvsp[-3].data_value),(yyvsp[-1].string_value)); }
+                         {std::cout<< "Lipseste ';' la finalul instructiunii.\n"; sintacticCorect = 0;}
 #line 1725 "y.tab.c"
     break;
 
-  case 63:
-#line 129 "lfac.y"
-                     {if(!memory.exists_class((yyvsp[-2].string_value))) {std::cout<<"Clasa nu este definita. \n";} memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
+  case 59:
+#line 125 "lfac.y"
+                                           {memory.print((yyvsp[-3].data_value),(yyvsp[-1].string_value)); }
 #line 1731 "y.tab.c"
     break;
 
   case 64:
 #line 130 "lfac.y"
-                          {if(!memory.exists_function_byName((yyvsp[-3].string_value))) {std::cout<<"Functia nu este definita. \n";} }
+                     {if(!memory.exists_class((yyvsp[-2].string_value))) {std::cout<<"Clasa nu este definita. \n";} memory.declare((yyvsp[-2].string_value),(yyvsp[-1].string_value)); }
 #line 1737 "y.tab.c"
     break;
 
   case 65:
 #line 131 "lfac.y"
-                                         {if(!memory.exists_function_byName((yyvsp[-4].string_value))) {std::cout<<"Functia nu este definita.\n";} }
+                          {if(!memory.exists_function_byName((yyvsp[-3].string_value))) {std::cout<<"Functia nu este definita. \n";} }
 #line 1743 "y.tab.c"
     break;
 
-  case 68:
-#line 134 "lfac.y"
-                                   { memory.table_print();}
+  case 66:
+#line 132 "lfac.y"
+                                         {if(!memory.exists_function_byName((yyvsp[-4].string_value))) {std::cout<<"Functia nu este definita.\n";} }
 #line 1749 "y.tab.c"
     break;
 
   case 69:
 #line 135 "lfac.y"
-                                             {memory.table_print_functions();}
+                                   { memory.table_print();}
 #line 1755 "y.tab.c"
     break;
 
   case 70:
 #line 136 "lfac.y"
-                                      { memory.AST((yyvsp[-2].string_value)); }
+                                             {memory.table_print_functions();}
 #line 1761 "y.tab.c"
     break;
 
   case 71:
-#line 139 "lfac.y"
-                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a+b; }
+#line 137 "lfac.y"
+                                      { memory.AST((yyvsp[-2].string_value)); }
 #line 1767 "y.tab.c"
     break;
 
   case 72:
 #line 140 "lfac.y"
-                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a-b; }
+                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a+b; }
 #line 1773 "y.tab.c"
     break;
 
   case 73:
 #line 141 "lfac.y"
-                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a*b; }
+                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a-b; }
 #line 1779 "y.tab.c"
     break;
 
   case 74:
 #line 142 "lfac.y"
-                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a/b; }
+                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a*b; }
 #line 1785 "y.tab.c"
     break;
 
   case 75:
 #line 143 "lfac.y"
-                             {Data &a=*((yyvsp[-1].data_value)); (yyval.data_value)=&a;}
+                                      { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=a/b; }
 #line 1791 "y.tab.c"
     break;
 
   case 76:
 #line 144 "lfac.y"
-                { (yyval.data_value)=new Data((yyvsp[0].int_value));}
+                             {Data &a=*((yyvsp[-1].data_value)); (yyval.data_value)=&a;}
 #line 1797 "y.tab.c"
     break;
 
   case 77:
 #line 145 "lfac.y"
-                  { (yyval.data_value)=new Data((yyvsp[0].float_value));}
+                { (yyval.data_value)=new Data((yyvsp[0].int_value));}
 #line 1803 "y.tab.c"
     break;
 
   case 78:
 #line 146 "lfac.y"
-                   { (yyval.data_value)=new Data((yyvsp[0].string_value));}
+                  { (yyval.data_value)=new Data((yyvsp[0].float_value));}
 #line 1809 "y.tab.c"
     break;
 
   case 79:
 #line 147 "lfac.y"
-                 { (yyval.data_value)=new Data((yyvsp[0].char_value));}
+                   { (yyval.data_value)=new Data((yyvsp[0].string_value));}
 #line 1815 "y.tab.c"
     break;
 
   case 80:
 #line 148 "lfac.y"
-                 { (yyval.data_value)=new Data((yyvsp[0].bool_value));}
+                 { (yyval.data_value)=new Data((yyvsp[0].char_value));}
 #line 1821 "y.tab.c"
     break;
 
   case 81:
 #line 149 "lfac.y"
-               { (yyval.data_value)=memory.get((yyvsp[0].string_value));}
+                 { (yyval.data_value)=new Data((yyvsp[0].bool_value));}
 #line 1827 "y.tab.c"
     break;
 
   case 82:
 #line 150 "lfac.y"
-                        {if(!memory.exists_function_byName((yyvsp[-2].string_value))) {std::cout<<"Functia nu este definita.\n";} (yyval.data_value)=new Data(0); }
+               { (yyval.data_value)=memory.get((yyvsp[0].string_value));}
 #line 1833 "y.tab.c"
     break;
 
   case 83:
 #line 151 "lfac.y"
-                                {if(!memory.exists_function_byName((yyvsp[-3].string_value))) {std::cout<<"Functia nu este definita.\n";} (yyval.data_value)=new Data(0); }
+                        {if(!memory.exists_function_byName((yyvsp[-2].string_value))) {std::cout<<"Functia nu este definita.\n";} (yyval.data_value)=new Data(0); }
 #line 1839 "y.tab.c"
     break;
 
   case 84:
 #line 152 "lfac.y"
-                      { if(!memory.exists((yyvsp[-2].string_value))) {std::cout<<"Nu exista o clasa cu acest nume. \n";}   (yyval.data_value)=new Data(0);}
+                                {if(!memory.exists_function_byName((yyvsp[-3].string_value))) {std::cout<<"Functia nu este definita.\n";} (yyval.data_value)=new Data(0); }
 #line 1845 "y.tab.c"
     break;
 
   case 85:
 #line 153 "lfac.y"
-                  {(yyval.data_value)=new Data(0);}
+                      { if(!memory.exists((yyvsp[-2].string_value))) {std::cout<<"Nu exista o clasa cu acest nume. \n";}   (yyval.data_value)=new Data(0);}
 #line 1851 "y.tab.c"
     break;
 
   case 86:
-#line 156 "lfac.y"
-                                           {memory.push_scope();}
+#line 154 "lfac.y"
+                  {(yyval.data_value)=new Data(0);}
 #line 1857 "y.tab.c"
     break;
 
   case 87:
-#line 156 "lfac.y"
-                                                                            {memory.pop_scope();}
+#line 157 "lfac.y"
+                                           {memory.push_scope();}
 #line 1863 "y.tab.c"
     break;
 
   case 88:
 #line 157 "lfac.y"
-                                               {memory.push_scope();}
+                                                                            {memory.pop_scope();}
 #line 1869 "y.tab.c"
     break;
 
   case 89:
-#line 157 "lfac.y"
-                                                                                {memory.pop_scope();}
+#line 158 "lfac.y"
+                                               {memory.push_scope();}
 #line 1875 "y.tab.c"
     break;
 
   case 90:
-#line 160 "lfac.y"
-                                                     {memory.push_scope();}
+#line 158 "lfac.y"
+                                                                                {memory.pop_scope();}
 #line 1881 "y.tab.c"
     break;
 
   case 91:
-#line 160 "lfac.y"
-                                                                                      {memory.pop_scope();}
+#line 161 "lfac.y"
+                                                     {memory.push_scope();}
 #line 1887 "y.tab.c"
     break;
 
   case 92:
 #line 161 "lfac.y"
-                                                 {memory.push_scope();}
+                                                                                      {memory.pop_scope();}
 #line 1893 "y.tab.c"
     break;
 
   case 93:
-#line 161 "lfac.y"
-                                                                                  {memory.pop_scope();}
+#line 162 "lfac.y"
+                                                 {memory.push_scope();}
 #line 1899 "y.tab.c"
     break;
 
   case 94:
-#line 164 "lfac.y"
-                                                                                              {{if(memory.exists((yyvsp[-9].string_value))){memory.assign((yyvsp[-9].string_value),(yyvsp[-7].data_value));} else {std::cout<<"Variabila nu a fost declarata.\n"; sintacticCorect = 0;}} memory.push_scope();}
+#line 162 "lfac.y"
+                                                                                  {memory.pop_scope();}
 #line 1905 "y.tab.c"
     break;
 
   case 95:
-#line 164 "lfac.y"
-                                                                                                                                                                                                                                                         {memory.pop_scope();}
+#line 165 "lfac.y"
+                                                                                              {{if(memory.exists((yyvsp[-9].string_value))){memory.assign((yyvsp[-9].string_value),(yyvsp[-7].data_value));} else {std::cout<<"Variabila nu a fost declarata.\n"; sintacticCorect = 0;}} memory.push_scope();}
 #line 1911 "y.tab.c"
     break;
 
   case 96:
 #line 165 "lfac.y"
-                                                                                          {{if(memory.exists((yyvsp[-9].string_value))){memory.assign((yyvsp[-9].string_value),(yyvsp[-7].data_value));} else {std::cout<<"Variabila nu a fost declarata.\n"; sintacticCorect = 0;}} memory.push_scope(); }
+                                                                                                                                                                                                                                                         {memory.pop_scope();}
 #line 1917 "y.tab.c"
     break;
 
   case 97:
-#line 165 "lfac.y"
-                                                                                                                                                                                                                                                       {memory.pop_scope();}
+#line 166 "lfac.y"
+                                                                                          {{if(memory.exists((yyvsp[-9].string_value))){memory.assign((yyvsp[-9].string_value),(yyvsp[-7].data_value));} else {std::cout<<"Variabila nu a fost declarata.\n"; sintacticCorect = 0;}} memory.push_scope(); }
 #line 1923 "y.tab.c"
     break;
 
   case 98:
-#line 168 "lfac.y"
-                                             { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a==b); }
+#line 166 "lfac.y"
+                                                                                                                                                                                                                                                       {memory.pop_scope();}
 #line 1929 "y.tab.c"
     break;
 
   case 99:
 #line 169 "lfac.y"
-                                                 { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a!=b); }
+                                             { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a==b); }
 #line 1935 "y.tab.c"
     break;
 
   case 100:
 #line 170 "lfac.y"
-                                           { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a<b); }
+                                                 { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a!=b); }
 #line 1941 "y.tab.c"
     break;
 
   case 101:
 #line 171 "lfac.y"
-                                           { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a>b); }
+                                           { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a<b); }
 #line 1947 "y.tab.c"
     break;
 
   case 102:
 #line 172 "lfac.y"
-                                          {Data &a=*((yyvsp[-1].data_value)); (yyval.data_value)=&a;}
+                                           { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a>b); }
 #line 1953 "y.tab.c"
     break;
 
   case 103:
-#line 175 "lfac.y"
-                                                         { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a&&b); }
+#line 173 "lfac.y"
+                                          {Data &a=*((yyvsp[-1].data_value)); (yyval.data_value)=&a;}
 #line 1959 "y.tab.c"
     break;
 
   case 104:
 #line 176 "lfac.y"
-                                                        { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a||b); }
+                                                         { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a&&b); }
 #line 1965 "y.tab.c"
     break;
 
   case 105:
 #line 177 "lfac.y"
-                                                             { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a&&b); }
+                                                        { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a||b); }
 #line 1971 "y.tab.c"
     break;
 
   case 106:
 #line 178 "lfac.y"
-                                                            { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a||b); }
+                                                             { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a&&b); }
 #line 1977 "y.tab.c"
     break;
 
   case 107:
 #line 179 "lfac.y"
-                                                 {Data &a=*((yyvsp[-1].data_value)); (yyval.data_value)=&a;}
+                                                            { Data &a=*((yyvsp[-2].data_value)); Data &b=*((yyvsp[0].data_value)); (yyval.data_value)=(a||b); }
 #line 1983 "y.tab.c"
     break;
 
+  case 108:
+#line 180 "lfac.y"
+                                                 {Data &a=*((yyvsp[-1].data_value)); (yyval.data_value)=&a;}
+#line 1989 "y.tab.c"
+    break;
 
-#line 1987 "y.tab.c"
+
+#line 1993 "y.tab.c"
 
       default: break;
     }
@@ -2215,7 +2221,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 181 "lfac.y"
+#line 182 "lfac.y"
 
 
 void yyerror(char * s){
