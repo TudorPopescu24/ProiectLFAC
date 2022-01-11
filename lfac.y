@@ -23,7 +23,7 @@ int sintacticCorect = 1;
   class Data * data_value;
 }
 
-%token MAIN PRINT IF WHILE FOR CLASS PUBLIC PRIVATE PROTECTED PCT EQUAL NOT_EQUAL AND OR CONST ARRAY PRINT_TABLE PRINT_TABLE_FUNCTIONS
+%token MAIN PRINT IF WHILE FOR CLASS PUBLIC PRIVATE PROTECTED PCT EQUAL NOT_EQUAL AND OR CONST ARRAY PRINT_TABLE PRINT_TABLE_FUNCTIONS ASTFUNC
 %token <string_value> TYPE 
 %token <int_value> INT
 %token <float_value> FLOAT
@@ -133,6 +133,7 @@ statement: ID '=' expression ';'{if(memory.exists($1)){memory.assign($1,$3);} el
          | '{' statement_seq '}'
          | PRINT_TABLE '(' ')' ';' { memory.table_print();}
          | PRINT_TABLE_FUNCTIONS '(' ')' ';' {memory.table_print_functions();}
+         | ASTFUNC '(' STRING ')' ';' { memory.AST($3); }
          ;
 
 expression: expression '+' expression { Data &a=*($1); Data &b=*($3); $$=a+b; }

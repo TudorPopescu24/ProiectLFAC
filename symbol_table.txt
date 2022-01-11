@@ -12,6 +12,8 @@ int n 10
 float prod 7.50
 int result 20
 int sum 10
+int var1 10
+int var2 5
 int vector1 0
 int vector2 0
 

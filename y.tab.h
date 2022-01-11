@@ -67,13 +67,14 @@ extern int yydebug;
     ARRAY = 273,
     PRINT_TABLE = 274,
     PRINT_TABLE_FUNCTIONS = 275,
-    TYPE = 276,
-    INT = 277,
-    FLOAT = 278,
-    STRING = 279,
-    CHAR = 280,
-    BOOL = 281,
-    ID = 282
+    ASTFUNC = 276,
+    TYPE = 277,
+    INT = 278,
+    FLOAT = 279,
+    STRING = 280,
+    CHAR = 281,
+    BOOL = 282,
+    ID = 283
   };
 #endif
 /* Tokens.  */
@@ -95,13 +96,14 @@ extern int yydebug;
 #define ARRAY 273
 #define PRINT_TABLE 274
 #define PRINT_TABLE_FUNCTIONS 275
-#define TYPE 276
-#define INT 277
-#define FLOAT 278
-#define STRING 279
-#define CHAR 280
-#define BOOL 281
-#define ID 282
+#define ASTFUNC 276
+#define TYPE 277
+#define INT 278
+#define FLOAT 279
+#define STRING 280
+#define CHAR 281
+#define BOOL 282
+#define ID 283
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -116,7 +118,7 @@ union YYSTYPE
   bool bool_value;
   class Data * data_value;
 
-#line 120 "y.tab.h"
+#line 122 "y.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

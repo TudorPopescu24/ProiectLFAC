@@ -307,58 +307,13 @@ void adaugaincoada(coada &postfix, stiva &S)
 //adaugam in stiva operatorii
 void adaugainstiva(stiva &S, coada &postfix, char &x, int &i)
 {
-
-    //verificam daca este functie
-    if (x == 's' && infix[i + 1] == 'i' && infix[i + 2] == 'n')
-    {
-        push(S, 's');
-        i = i + 2;
-    }
-    else if (x == 'c' && infix[i + 1] == 'o' && infix[i + 2] == 's')
-    {
-        push(S, 'c');
-        i = i + 2;
-    }
-    else if (x == 't' && infix[i + 1] == 'g')
-    {
-        push(S, 't');
-        i = i + 1;
-    }
-    else if (x == 'c' && infix[i + 1] == 't' && infix[i + 2] == 'g')
-    {
-        push(S, 'g');
-        i = i + 2;
-    }
-    else if (x == 'l' && infix[i + 1] == 'o' && infix[i + 2] == 'g')
-    {
-        push(S, 'l');
-        i = i + 2;
-    }
-    else if (x == 'r' && infix[i + 1] == 'a' && infix[i + 2] == 'd')
-    {
-        push(S, 'r');
-        i = i + 2;
-    }
-    else if (x == 'l' && infix[i + 1] == 'n')
-    {
-        push(S, 'e');
-        i = i + 1;
-    }
-    else if (x == 'l' && infix[i + 1] == 'g')
-    {
-        push(S, 'z');
-        i = i + 1;
-    }
-    else
-        push(S, x); //altfel, este semn
+    push(S, x); //altfel, este semn
 }
 
 bool esteoperator(char infix[], int i)
 { // construirea notatie postfixate
 
     if (strchr("+-*/^(),", infix[i]))
-        return 1;
-    if (strchr("sctglr", infix[i]) && strchr("iogtan", infix[i + 1]))
         return 1;
     return 0;
 }
@@ -368,26 +323,6 @@ int esteoperator1(char element[])
 
     if (strchr("+-*/^", element[0]) && element[1] == NULL)
         return 2;
-    if ((element[0] == 'l') && (element[1] == 'o') && (element[2] == 'g'))
-        return 2;
-    if ((element[0] == 'r') && (element[1] == 'a') && (element[2] == 'd'))
-        return 2;
-    if (strchr("sctgl", element[0]) && strchr("iogtn", element[1]) && element[1] != NULL)
-        return 1;
-    return 0;
-}
-
-int esteoperator2(char element[])
-{ //parcurgerea arborelui
-
-    if (strchr("+-*/^", element[0]) && element[1] == NULL)
-        return 2;
-    if ((element[0] == 'l') && (element[1] == 'o') && (element[2] == 'g'))
-        return 1;
-    if ((element[0] == 'r') && (element[1] == 'a') && (element[2] == 'd'))
-        return 1;
-    if (strchr("sctgl", element[0]) && strchr("iogtn", element[1]) && element[1] != NULL)
-        return 1;
     return 0;
 }
 
@@ -465,7 +400,7 @@ void convInfix2Postfix(char infix[], coada &postfix)
 }
 
 //adaugam notatia postfixata in stiva de arbori
-void adaugaLaArboreElement(coada C, stivaarbore &S)
+void buildAST(coada C, stivaarbore &S)
 {
     int i = 0;
     arbore *arbore_nou;
@@ -494,15 +429,6 @@ void adaugaLaArboreElement(coada C, stivaarbore &S)
                 poparbore(S);
                 pusharbore(S, arbore_nou);
             }
-            else
-            { // este functie unara (sin, cos, tg, ctg, ln, lg)
-                arbore_nou = new arbore;
-                strcpy(arbore_nou->info, element);
-                arbore_nou->dr = NULL;
-                arbore_nou->st = S.varf->info;
-                poparbore(S);
-                pusharbore(S, arbore_nou);
-            }
             memset(element, '\0', strlen(element));
             i = 0;
         }
@@ -520,39 +446,5 @@ void adaugaLaArboreElement(coada C, stivaarbore &S)
         arbore_nou->st = S.varf->info;
         poparbore(S);
         pusharbore(S, arbore_nou);
-    }
-    else
-    {
-        arbore_nou = new arbore;
-        strcpy(arbore_nou->info, element);
-        arbore_nou->dr = NULL;
-        arbore_nou->st = S.varf->info;
-        poparbore(S);
-        pusharbore(S, arbore_nou);
-    }
-}
-
-int creareArbore(arbore *a)
-{
-
-    if (a != NULL)
-    {
-        if (strstr(a->info, "+"))
-        {
-            return creareArbore(a->st) + creareArbore(a->dr);
-        }
-        if (strstr(a->info, "-"))
-        {
-            return creareArbore(a->st) - creareArbore(a->dr);
-        }
-        if (strstr(a->info, "*"))
-        {
-            return creareArbore(a->st) * creareArbore(a->dr);
-        }
-        if (strstr(a->info, "/"))
-        {
-            return creareArbore(a->st) / creareArbore(a->dr);
-        }
-        return atoi(a->info);
     }
 }

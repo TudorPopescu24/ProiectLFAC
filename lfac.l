@@ -19,6 +19,7 @@
 "protected" {return PROTECTED;}
 "print_table" {return PRINT_TABLE;}
 "print_table_functions" {return PRINT_TABLE_FUNCTIONS;}
+"ASTfunction" {return ASTFUNC;}
 "==" {return EQUAL;}
 "!=" {return NOT_EQUAL;}
 "."  {return PCT;}

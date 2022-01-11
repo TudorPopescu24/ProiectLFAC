@@ -176,12 +176,13 @@ public:
             }
         }
         myfile.close();
-        functieAst();
     }
 
-    void functieAst()
+    void AST(char* expression)
     {
-        strcpy(infix, "10+4*5");
+        strcpy(infix, expression + 1);
+        infix[strlen(infix)-1] = '\0';
+        cout << infix << '\n';
         initializeazacoada(postfix);
         convInfix2Postfix(infix, postfix);
         cout << "Notatia postfixata a expresiei " << infix << " este: ";
@@ -189,9 +190,47 @@ public:
         cout << endl;
         stivaarbore S;
         initializeazastivaarbore(S);
-        adaugaLaArboreElement(postfix, S);
-        cout << "Arborele expresiei este: ";
-        int rezultat = creareArbore(S.varf->info);
+        buildAST(postfix, S);
+        cout << "Rezultatul expresiei " << infix << " este: ";
+        int rezultat = evalAST(S.varf->info);
         cout << rezultat << endl;
+    }
+
+    int evalAST(arbore *a)
+    {
+        if (a != NULL)
+        {
+            if (strstr(a->info, "+"))
+            {
+                return evalAST(a->st) + evalAST(a->dr);
+            }
+            if (strstr(a->info, "-"))
+            {
+                return evalAST(a->st) - evalAST(a->dr);
+            }
+            if (strstr(a->info, "*"))
+            {
+                return evalAST(a->st) * evalAST(a->dr);
+            }
+            if (strstr(a->info, "/"))
+            {
+                return evalAST(a->st) / evalAST(a->dr);
+            }
+            else if (strchr("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", a->info[0]))
+            {
+                Data* variable;
+                for (int i = stack.size() - 1; i >= 0; i--)
+                {
+                    Scope *scope = stack[i];
+                    if (scope->exists_variable(a->info))
+                    {
+                        variable = scope->get(a->info);
+                        break;
+                    }
+                }
+                return variable->int_value;
+            }
+            return atoi(a->info);
+        }
     }
 };

@@ -75,7 +75,10 @@ main() {
         a = a - 1;
     }
 
+    int var1 = 10;
+    int var2 = 5;
     print_table();
     print_table_functions();
-
+    ASTfunction("(var1+var2-10)*2");
+    ASTfunction("(var1/var2)*7+3");
 }
